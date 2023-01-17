@@ -1,0 +1,35 @@
+dompdf-> https://github.com/barryvdh/laravel-dompdf
+excel-> https://docs.laravel-excel.com/3.1/getting-started/installation.html
+
+
+//crear proyecto
+composer create-project laravel/laravel:8.6 project-name
+
+
+(opcional para login)Instalar node js
+//Crear modelos con la migracion
+php artisan make:model ModelName -m 
+//modificar modelo segun campos requeridos
+//NOTA: crear tablas independientes a dependientes
+php artisan migrate
+//
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+php artisan serve //muestra login
+
+//crear el CRUD 
+composer require ibex/crud-generator --dev
+php artisan vendor:publish --tag=crud
+php artisan make:crud TableNameBD
+
+
+///LISTO 
+Modificar URLs
+//modificar en web.php
+Route::resource('alumnos', App\Http\Controllers\AlumnoController::class);
+agregar en archivo app.blade.php
+ <li class="nav-item">
+    <a class="nav-link" href="{{ route('alumnos.index') }}">{{ __('Alumnos') }}</a>
+</li>

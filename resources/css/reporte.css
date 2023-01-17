@@ -1,0 +1,22 @@
+.table>tbody>tr>td {
+    vertical-align: middle;
+}
+
+table.table-bordered {
+    border: 1px solid #585756;
+    margin-top: 20px;
+}
+
+table.table-bordered>thead>tr>th {
+    border: 1px solid #585756;
+}
+
+table.table-bordered>tbody>tr>td {
+    border: 1px solid #585756;
+}
+
+.encabezado{
+    background-color: #16a085;
+    color: white;
+    text-align: center;
+}
